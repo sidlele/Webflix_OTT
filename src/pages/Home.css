@@ -1,0 +1,28 @@
+.login-root {
+  background: url('https://assets.nflxext.com/ffe/siteui/vlv3/37f3b4b6-5b9b-4f86-baae-cb162b8034bb/6de67c7b-48cd-4b8d-a11e-c541d42337cd/IN-en-20240513-popsignuptwoweeks-perspective_alpha_website_medium.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.login-box {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 8px;
+  color: white;
+}
