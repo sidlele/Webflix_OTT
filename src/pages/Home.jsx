@@ -11,7 +11,7 @@ import {
 import bgImage from '../assets/login-page-background.jpg';
 import logo from '../assets/webflix-logo.png';
 
-const Login = () => {
+const Home = () => {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
 
@@ -156,4 +156,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Home;

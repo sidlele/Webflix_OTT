@@ -12,14 +12,15 @@ import {
 import bgImage from '../assets/login-page-background.jpg';
 import logo from '../assets/webflix-logo.png';
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmpass,setConfirmPassword]=useState('')
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log('Logging in with:', { email, password });
+    console.log('Logging in with:', { email, password,confirmpass });
     // Add your login logic here
   };
 
@@ -98,7 +99,7 @@ const Login = () => {
               textAlign: 'left',
             }}
           >
-            Sign In
+            Sign Up
           </Typography>
 
           <Stack spacing={3}>
@@ -134,6 +135,22 @@ const Login = () => {
               }}
             />
 
+            <TextField
+            label="Confirm Password"
+            type="Password"
+            variant="filled"
+              required
+              fullWidth
+              value={confirmpass}
+              onChange={(e) => setPassword(e.target.value)}
+              InputProps={{
+                style: { backgroundColor: '#fff' },
+              }}
+              InputLabelProps={{
+                style: { color: '#555' },
+              }}>
+
+            </TextField>
             <Button
               type="submit"
               variant="contained"
@@ -141,18 +158,18 @@ const Login = () => {
               fullWidth
               sx={{ fontWeight: 'bold', fontSize: '1rem', py: 1.5 }}
             >
-              Sign In
+              Sign Up
             </Button>
           </Stack>
 
           <Typography sx={{ mt: 3, color: '#ccc', textAlign: 'center' }}>
-            New to Webflix?{' '}
+            Already have a account?{' '}
             <Link
-              onClick={() => navigate('/register')}
+              onClick={() => navigate('/login')}
               underline="hover"
               sx={{ color: 'white', cursor: 'pointer', fontWeight: 'bold' }}
             >
-              Sign up now.
+              Login In now.
             </Link>
           </Typography>
         </Box>
@@ -161,4 +178,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
